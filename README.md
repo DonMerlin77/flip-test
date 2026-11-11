@@ -4,14 +4,14 @@
 
 A small check for language models that turn text into structured data.
 
-Ask a model "Does the furnace **need** supplies?" and it may answer as if you asked "Does the furnace **have** supplies?" Tested one question at a time, a model like that can look mostly fine. It gets some questions right by luck, because the word it ignores happens to match its default.
+Ask a model "Does the bakery **need** flour?" and it may answer as if you asked "Does the bakery **have** flour?" Tested one question at a time, a model like that can look mostly fine. It gets some questions right by luck, because the word it ignores happens to match its default.
 
 flip-test catches this with **pairs**: the same input twice, changed in one place, where that one change should change the answer. If the output does not change with it, the model is matching on familiar words, not reading the one that matters.
 
 ```
 [STUCK] need-vs-has
-  a: 'Does the furnace need supplies?'
-  b: 'Does the furnace have supplies?'
+  a: 'Does the bakery need flour?'
+  b: 'Does the bakery have flour?'
   same answer on both sides for: intent
   a.intent: want 'ask_need', got 'ask_has'
 
@@ -45,7 +45,7 @@ Add `--json` for the full results, including both raw outputs for every pair.
 One pair per line in a JSONL file. Each side has an `input` and the fields the output must match. Nested fields use dots (`question.type`).
 
 ```json
-{"id": "need-vs-has", "a": {"input": "Does the furnace need supplies?", "expect": {"intent": "ask_need", "object": "furnace"}}, "b": {"input": "Does the furnace have supplies?", "expect": {"intent": "ask_has", "object": "furnace"}}}
+{"id": "need-vs-has", "a": {"input": "Does the bakery need flour?", "expect": {"intent": "ask_need", "object": "bakery"}}, "b": {"input": "Does the bakery have flour?", "expect": {"intent": "ask_has", "object": "bakery"}}}
 ```
 
 Three verdicts:

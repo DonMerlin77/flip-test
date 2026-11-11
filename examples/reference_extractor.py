@@ -2,7 +2,7 @@ import json
 import sys
 
 PEOPLE = ["smith", "guard"]
-STOP = {"does", "did", "the", "a", "when", "what", "need", "have", "see", "supplies", "coal"}
+STOP = {"does", "did", "the", "a", "when", "what", "need", "have", "see", "flour", "coal"}
 
 
 def content_words(text):

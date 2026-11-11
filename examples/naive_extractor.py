@@ -1,7 +1,7 @@
 import json
 import sys
 
-NOUNS = ["furnace", "forge", "smith", "guard", "cart", "supplies", "coal"]
+NOUNS = ["bakery", "forge", "smith", "guard", "cart", "flour", "coal"]
 
 
 def extract(inp):
