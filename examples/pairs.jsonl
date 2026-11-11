@@ -1,0 +1,6 @@
+# One pair per line. Each side has an input and the fields the extractor must get right.
+# A good pair changes ONE thing, and that one thing should change the answer.
+{"id": "need-vs-has", "a": {"input": "Does the furnace need supplies?", "expect": {"intent": "ask_need", "object": "furnace"}}, "b": {"input": "Does the furnace have supplies?", "expect": {"intent": "ask_has", "object": "furnace"}}}
+{"id": "need-vs-has-2", "a": {"input": "Does the forge need coal?", "expect": {"intent": "ask_need", "object": "forge"}}, "b": {"input": "Does the forge have coal?", "expect": {"intent": "ask_has", "object": "forge"}}}
+{"id": "who-saw-whom", "a": {"input": "Did the smith see the guard?", "expect": {"subject": "smith", "object": "guard"}}, "b": {"input": "Did the guard see the smith?", "expect": {"subject": "guard", "object": "smith"}}}
+{"id": "answer-in-facts-or-not", "a": {"input": {"question": "When does the cart arrive?", "facts": ["The cart arrives at noon."]}, "expect": {"answer_known": true}}, "b": {"input": {"question": "When does the cart arrive?", "facts": ["The well was fixed today."]}, "expect": {"answer_known": false}}}
