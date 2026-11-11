@@ -1,5 +1,7 @@
 # flip-test
 
+[![tests](https://github.com/DonMerlin77/flip-test/actions/workflows/tests.yml/badge.svg)](https://github.com/DonMerlin77/flip-test/actions/workflows/tests.yml)
+
 A small check for language models that turn text into structured data.
 
 Ask a model "Does the furnace **need** supplies?" and it may answer as if you asked "Does the furnace **have** supplies?" Tested one question at a time, a model like that can look mostly fine. It gets some questions right by luck, because the word it ignores happens to match its default.
@@ -21,7 +23,7 @@ That last line is the point. The same model scores 3 of 8 on single questions an
 
 ## Use it
 
-Python 3.8+, no dependencies.
+Python 3.10+, no dependencies.
 
 ```bash
 # your extractor is a command that reads one input on stdin and prints JSON
